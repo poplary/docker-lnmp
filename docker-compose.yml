@@ -6,6 +6,7 @@ services:
         build: ./PHP-FPM
         volumes:
             - ../../win/www:/www
+            - ./extra/config/php/conf.d/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
         ports:
             - "9000:9000"
 

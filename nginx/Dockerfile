@@ -1,3 +1,3 @@
 FROM nginx:latest
 
-RUN mkdir -p /www
+#RUN mkdir -p /www
