@@ -1,3 +1,3 @@
 FROM nginx:latest
 
-#RUN mkdir -p /www
+COPY nginx.conf /etc/nginx/nginx.conf
