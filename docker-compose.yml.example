@@ -6,6 +6,17 @@ services:
         # build: ./PHP-FPM
         volumes:
             - ./extra/www:/www
+
+            # Choose php.ini of different environment.
+            # - ./extra/config/php/php-development.ini:/usr/local/etc/php/php.ini
+            # - ./extra/config/php/php-production.ini:/usr/local/etc/php/php.ini
+
+            # php-fpm.conf
+            - ./extra/config/php/php-fpm.conf:/usr/local/etc/php-fpm.conf
+
+            # www.conf
+            - ./extra/config/php/php-fpm.d/www.conf:/usr/local/etc/php-fpm.d/www.conf
+
             # Disable xdebug in production.
             # - ./extra/config/php/conf.d/docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
         ports:
